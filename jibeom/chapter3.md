@@ -23,12 +23,14 @@ Chapter3. 신경망
 2-1 시그모이드 함수/ 2-4 시그모이드 함수 구현하기
 
  
+<img width="274" alt="image" src="https://user-images.githubusercontent.com/91449518/179902386-f64a8af1-ab27-45ad-9fc9-aab4b651122c.png">
 
  
 
 2-2 계단 함수 수현하기/ 2-3 계단 함수의 그래프
 
- 
+ <img width="230" alt="image" src="https://user-images.githubusercontent.com/91449518/179902397-ed9565c9-0e7f-4a86-8581-42425eb71d2c.png">
+
 
 2-5 시그모이드 함수와 계단 함수 비교
 
@@ -44,8 +46,10 @@ Chapter3. 신경망
 
 2-7 ReLU 함수
 
- 
- 
+ <img width="167" alt="image" src="https://user-images.githubusercontent.com/91449518/179902431-8f221dfe-814f-4b03-8fc0-ce9a72d2d770.png">
+
+ <img width="136" alt="image" src="https://user-images.githubusercontent.com/91449518/179902454-d5cae39a-a4c7-42f7-9d2f-4c200cc1f912.png">
+
  
 3.	다차원 배열의 계산
 3-1 다차원 배열/ 3-2 행렬의 곱/ 3-3 신경망에서의 행렬 곱
@@ -128,4 +132,4 @@ MNIST 데이터의 입력이 28*28의 크기이므로 입력층 뉴런은 784개
 입력 데이터를 묶은 것을 배치라 하며, 추론 처리를 배치 단워로 진행시 훨씬 빠르게 결과 얻을 수 있다
 
 
-<img width="148" alt="image" src="https://user-images.githubusercontent.com/91449518/179902053-30441de6-f42c-4293-b1d7-01f2d39ec875.png">
+
