@@ -5,14 +5,14 @@ Chapter3. 신경망
 
 신경망 퍼셉트론의 단점인 가중치 설정하는 작업을 자동으로 학습하여 수행한다
 
- 
+<img width="235" alt="image" src="https://user-images.githubusercontent.com/91449518/179902036-25d9a679-223f-46b5-821d-02706c9d571f.png">
 
 신경망은 입력층, 은닉층, 출력층으로 구분된다
 입력층: 입력받는 층
 은닉층: 입력층과 출력층 사이의 층으로 사람눈에 보이지 않는 층
 출력층: 출력하는 층
 
- 
+<img width="148" alt="image" src="https://user-images.githubusercontent.com/91449518/179902053-30441de6-f42c-4293-b1d7-01f2d39ec875.png">
 
 활성화 함수: 입력 신호의 총합을 출력 신호로 변환하는 함수 ex) 위의 h()
 
@@ -124,8 +124,5 @@ MNIST 데이터의 입력이 28*28의 크기이므로 입력층 뉴런은 784개
 
 입력 데이터를 묶은 것을 배치라 하며, 추론 처리를 배치 단워로 진행시 훨씬 빠르게 결과 얻을 수 있다
 
-
-
-<img width="235" alt="image" src="https://user-images.githubusercontent.com/91449518/179902036-25d9a679-223f-46b5-821d-02706c9d571f.png">
 
 <img width="148" alt="image" src="https://user-images.githubusercontent.com/91449518/179902053-30441de6-f42c-4293-b1d7-01f2d39ec875.png">
