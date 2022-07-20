@@ -54,21 +54,30 @@ Chapter3. 신경망
 3.	다차원 배열의 계산
 3-1 다차원 배열/ 3-2 행렬의 곱/ 3-3 신경망에서의 행렬 곱
 
+
+<img width="273" alt="image" src="https://user-images.githubusercontent.com/91449518/179902553-11f35115-59c7-4745-81b3-6d7a47de14a1.png">
+
  
 입력을 받아 출력을 계산하는 신경망에서의 과정을 행렬의 곱으로 표현
 
-4.	3층 신경망 구현하기
+4. 3층 신경망 구현하기
+
 넘파이 사용시 적은 코드만으로 신경망의 순방향 처리를 완성할 수 있음 
+
+<img width="211" alt="image" src="https://user-images.githubusercontent.com/91449518/179902594-89529aa8-bc69-47c5-abb5-e159d2a32639.png">
+
 
 4-1 표기법 설명
 
- 
+<img width="234" alt="image" src="https://user-images.githubusercontent.com/91449518/179902633-1c4672b5-9b0a-453e-8d8e-0547d052571c.png">
 
 4-2 각 층의 신호 전달 구현하기/ 4-3 구현 정리
 
- 
+<img width="199" alt="image" src="https://user-images.githubusercontent.com/91449518/179902641-e204e3e6-ad13-47f3-8702-a5973ec195ef.png">
 
 위 그림의 두꺼운 선을 따라 1층의 1번째 뉴런의 a값을 아래의 행렬 이용해 식을 나타내면 A(1) = XW(1) + B(1) 
+ 
+<img width="218" alt="image" src="https://user-images.githubusercontent.com/91449518/179902662-2d5791b6-a16d-4474-9471-20dfebbd35a1.png">
  
 
 5 출력층 설계하기
@@ -80,9 +89,14 @@ Chapter3. 신경망
 항등 함수: 입력신호 그대로 출력
 
 소프트맥스 함수
+
+<img width="187" alt="image" src="https://user-images.githubusercontent.com/91449518/179902689-4f6e1fb4-5ff4-4788-aeee-7db335fe74e8.png">
+
  
 5.2 소프트맥스 함수 구현 시 주의점
  
+<img width="264" alt="image" src="https://user-images.githubusercontent.com/91449518/179902705-4ae0b5ee-3bb1-41b2-9e67-1aef11ec1068.png">
+
 
 지수함수 꼴이라 수가 매우 커져서 오류를 발생시킬 수 있으므로 각 지수함수의 밑 부분에 같은 수를 더하면서 오류가 안 나게 해야 한다.
 
