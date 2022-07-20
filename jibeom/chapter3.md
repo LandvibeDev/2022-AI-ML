@@ -8,8 +8,11 @@ Chapter3. 신경망
 <img width="235" alt="image" src="https://user-images.githubusercontent.com/91449518/179902036-25d9a679-223f-46b5-821d-02706c9d571f.png">
 
 신경망은 입력층, 은닉층, 출력층으로 구분된다
+
 입력층: 입력받는 층
+
 은닉층: 입력층과 출력층 사이의 층으로 사람눈에 보이지 않는 층
+
 출력층: 출력하는 층
 
 <img width="148" alt="image" src="https://user-images.githubusercontent.com/91449518/179902053-30441de6-f42c-4293-b1d7-01f2d39ec875.png">
