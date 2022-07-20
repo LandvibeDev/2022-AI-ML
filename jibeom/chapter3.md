@@ -126,3 +126,6 @@ MNIST 데이터의 입력이 28*28의 크기이므로 입력층 뉴런은 784개
 
 
 
+<img width="235" alt="image" src="https://user-images.githubusercontent.com/91449518/179902036-25d9a679-223f-46b5-821d-02706c9d571f.png">
+
+<img width="148" alt="image" src="https://user-images.githubusercontent.com/91449518/179902053-30441de6-f42c-4293-b1d7-01f2d39ec875.png">
