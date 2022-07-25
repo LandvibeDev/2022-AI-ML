@@ -9,7 +9,7 @@
 <strong>계산 그래프</strong>는 계산 과정을 그래프로 나타낸 것
 - 그래프는 그래프 자료구조와 같이, 복수의 노드와 에지로 표현 됨
 
-![그림5-2](./img/chapter5/img5-2.jpeg)
+![img5-2](https://user-images.githubusercontent.com/58386334/180712813-bef3a16f-19f5-4220-a77c-1cd32e25c152.jpeg)
 ### 5.1.1 계산 그래프로 풀다
 계산 그래프에서 '계산을 왼쪽에서 오른쪽으로 진행'하는 단계를 <strong>순전파</strong>라고함\
 순전파의 반대방향인 '오른쪽에서 왼쪽으로'의 전파인 <strong>역전파</strong> 또한 존재함
@@ -23,7 +23,7 @@
 - 계산 그래프는 중간 계산 결과를 모두 보관할 수 있음
 - 역전파를 통해 '미분'을 효율적으로 계산할 수 있음
 
-![그림5-5](./img/chapter5/img5-5.jpeg)
+![img5-5](https://user-images.githubusercontent.com/58386334/180712836-6a6e8a93-9a5c-4efd-9551-ac0897229e55.jpeg)
 
 그래프에서 역전파는 순전파와 반대방향의 화살표(굵은 선)로 그림
 
@@ -31,7 +31,8 @@
 ## 5.2 연쇄법칙
 ### 5.2.1 계산 그래프의 역전파
 역전파의 절파는 신호 E에 노드의 구소적 미분 ( $dy\over dx$ ) 을 곱한 후 다음 노드로 전달하는 것임
-![그림5-6](./img/chapter5/Img5-6.jpeg)
+![Img5-6](https://user-images.githubusercontent.com/58386334/180712871-d3eb0c24-8b9f-48a6-aaf9-da407bcfdb3b.jpeg)
+
 이러한 방식을 따르면 목표로 하는 미분 값을 효율적으로 구할 수 있다는 것이 핵심\
 이것이 왜 가능한 지는 연쇄법칙의 원리로 설명할 수 있음
 ### 5.2.2 연쇄법칙이란?
@@ -39,23 +40,27 @@ $$
 \frac{dz}{dx} = \frac{dz}{dt} \frac{dt}{dx}
 $$
 ### 5.2.3 연쇄법칙과 계산 그래프
-![그림5-7](./img/chapter5/img5-7.jpeg)
+![img5-7](https://user-images.githubusercontent.com/58386334/180712910-7023db68-c177-4693-95ab-6bd101ccafed.jpeg)
+
 
 ----------
 ## 5.3 역전파
 ### 5.3.1 덧셈 노드의 역전파
 덧셈 노드의 역전파는 1을 곱하기만 할 뿐 입력된 값을 그대로 다음 노드로 보냄\
 ~~$ \frac{dz}{dx} = \frac{dz}{dy} = 1 $ 이기 때문임~~
-![그림5-9](./img/chapter5/img5-9.jpeg)
+![img5-9](https://user-images.githubusercontent.com/58386334/180712944-644d8649-ac4c-4d91-9fb1-d47b752d2085.jpeg)
+
 ### 5.3.2 곱셈 노드의 역전파
 $z = xy$인 경우 $\frac{dz}{dx}=y, \frac{dz}{dy}=x$이므로
-![](./img/chapter5/img5-12.jpeg)
+![img5-12](https://user-images.githubusercontent.com/58386334/180712957-77fe0d5b-e654-496e-ae6b-a1327fbe1250.jpeg)
+
 와 같이 그래프를 그릴 수 있음\
 곰셉 노드 역전파는 상류의 값에 순전파 떄의 입력 신호들을 '서로 바꾼 값'을 곱해서 하류로 보냄
 ### 5.3.3 사과 쇼핑의 예
 사과 쇼핑의 예에서 사과 가격의 미분은 2.2, 사과 개수의 미분은 110, 소비세의 미분은 200으로\
 같은 크기의 변화로 최종금액에는 소비세, 사과개수, 사과 가격 순으로 큰 영향을 준다고 해석할 수 있음
-![](./img/chapter5/img5-14.jpeg)
+![img5-14](https://user-images.githubusercontent.com/58386334/180712968-2fb362f3-05f5-4e0c-8c44-05c2472de067.jpeg)
+
 
 ------------
 ## 5.5 활성화 함수 계층 구현하기
@@ -79,7 +84,8 @@ $$
 $$
 
 ReLU 계층의 계산 그래프는 다음과 같이 그릴 수 있음
-![](./img/chapter5/img5-18.jpeg)
+![img5-18](https://user-images.githubusercontent.com/58386334/180713038-45a3a657-322c-4fa1-883d-7377d019c0ed.jpeg)
+
 ReLU 계층은 스위치로 비유할 수 있음
 ### 5.5.2 sigmoid 계층
 시그모이드 함수는 다음과 같음
@@ -89,7 +95,8 @@ y=\frac{1}{1+exp(-x)}
 $$
 
 위 식을 계산 그래프로 그리면 다음과 같음
-![](./img/chapter5/img5-19.jpeg)
+![img5-19](https://user-images.githubusercontent.com/58386334/180713047-fb1d5a8d-7f43-4d93-8a5f-d243ce59a116.jpeg)
+
 $y=\frac{1}{X}$의 미분은
 
 $$
@@ -106,7 +113,8 @@ dy=exp(x)
 $$
 
 이므로 sigmoid의 역전파를 계산 그래프로 그려보면
-![](./img/chapter5/img5-20.jpeg)
+![img5-20](https://user-images.githubusercontent.com/58386334/180713088-83e7191e-8132-410b-98e1-198df554d3eb.jpeg)
+
 그런데 $\frac{dL}{dy}y^2exp(-x)$는 다음과 같이 정리된다.
 
 $$
@@ -118,7 +126,7 @@ $$
 $$
 
 따라서 sigmoid 계층의 역전파는 순전파의 출력만으로 계산이 가능 함
-![](./img/chapter5/img5-22.jpeg)
+![img5-22](https://user-images.githubusercontent.com/58386334/180713111-c1444fb7-270f-4dce-9768-967527bc3cda.jpeg)
 
 ---------
 ## 5.6 Affine/Softmax 계층 구현하기
@@ -127,7 +135,7 @@ $$
 신경망의 순전파 때 수행하는 행렬의 곱을 기하학에서는 어파인 변환(affine translation)이라 함
 ```
 Affine 계층의 계산 그래프는 변수의 형상을 변수명 위에 표기함
-![](./img/chapter5/img5-24.jpeg)
+![img5-24](https://user-images.githubusercontent.com/58386334/180713138-3f0b70b4-51e3-472e-9c2b-c7d7448928f4.jpeg)
 
 위 계산 그래프를 이용해 역전파에 대해 생각 해보면,\
 $\frac{dL}{dX}$와 $X$의 형상이 같아야 하므로\
@@ -141,7 +149,7 @@ $$
 \end{aligned}
 $$
 
-![](./img/chapter5/img5-25.jpeg)
+![img5-25](https://user-images.githubusercontent.com/58386334/180713157-0ad312a9-6951-43d4-bd9b-7003b5109534.jpeg)
 ### 5.6.3 Softmax-with-Loss 계층
 소프트맥스 함수는 출력층에서 입력값을 정규화하여 출력함
 - 여기서 정규화란 출력의 합이 1이 되도록 변형 한다는 뜻
