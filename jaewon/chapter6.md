@@ -20,7 +20,7 @@
 ### 6.1.2 확률적 경사 하강법(SGD)
 SGD의 수식은 다음과 같음
 
-$$W\,\leftarrow W - \eta \frac{dL}{dW}$$
+$$W \leftarrow W - \eta \frac{dL}{dW}$$
 
 $W$는 갱신할 가중치 매개변수, $\frac{dL}{dW}$는 $W$에 대한 손실함수의 기울기, $\eta$는 학습률을 뜻함\
 식을 그대로 해석하면 기울어진 방향으로 일정거리 $\eta$만큼 이동하는 단순한 방법임\
@@ -72,8 +72,10 @@ SGD가 지그재그로 탐색하는 근본 원인은 기울어진 방향이 본�
 모멘텀 기법의 수식은 다음과 같이 쓸 수 있음\
 
 $$
-v\leftarrow \alpha v-\eta \frac{dL}{dW}\;[식\,6.3]\\
-W\leftarrow W+v\;[식\,6.4]
+\begin{aligned}
+v\leftarrow \alpha v-\eta \frac{dL}{dW} [식 6.3]\\
+W\leftarrow W+v[식 6.4]
+\end{aligned}
 $$
 
 여기서 추가된 $v$는 물리에서의 속도에 해당함\
@@ -113,8 +115,10 @@ AdaGrad는 개별 매개변수에 적응적으로 학습률을 조정하면서 �
 AdaGrad는 수식으로 다음과 같이 표현됨\
 
 $$
-h\leftarrow h+\frac{dL}{dW}\odot\frac{dL}{dW}\;[식\,6.5]\,\\
-W\leftarrow W+\eta \frac{1}{\sqrt{h}}\frac{dL}{dW}\;[식\,6.6]
+\begin{aligned}
+h\leftarrow h+\frac{dL}{dW}\odot\frac{dL}{dW}[식6.5]\\
+W\leftarrow W+\eta \frac{1}{\sqrt{h}}\frac{dL}{dW}[식6.6]
+\end{aligned}
 $$
 
 ($\odot$은 행렬의 원소별 곱셈을 뜻함)\
@@ -222,7 +226,10 @@ plt.show()
 Xavier 초깃값이란 다음과 같은 규칙을 사용하면 된다
 
 $$
-계층의\;노드가\;n개라면\\표준편차가\;\frac{1}{\sqrt{n}}인\;분포를\;사용
+\begin{aligned}
+계층의 &노드가 n개라면\\
+표준편차가 &\frac{1}{\sqrt{n}}인 분포를 사용
+\end{aligned}
 $$
 
 Xaiver 초깃값을 사용하여 다시 활성화값 분포를 알아보면
@@ -274,7 +281,7 @@ y_i \leftarrow \gamma \hat{x_i} + \beta
 $$
 
 $\gamma$는 확대, $\beta$는 이동을 담당함\
-두 값은 처음에는 $\gamma=1,\;\beta=0$부터 시작하고, 학습하면서 적합한 값으로 조정함\
+두 값은 처음에는 $\gamma=1,\beta=0$부터 시작하고, 학습하면서 적합한 값으로 조정함\
 ### 6.3.2 배치 정규화의 효과
 - 학습 속도가 빨라짐
 - 가중치 초기값에 의존적이지 않고 학습이 안정적으로 진행됨
