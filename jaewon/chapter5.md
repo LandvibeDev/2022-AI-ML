@@ -61,43 +61,54 @@ $z = xy$인 경우 $\frac{dz}{dx}=y, \frac{dz}{dy}=x$이므로
 ## 5.5 활성화 함수 계층 구현하기
 ### 5.5.1 ReLU 계층
 활성화 함수 ReLU의 수식은 다음과 같음
+
 $$
 y= \begin{cases}
 x\;(x>0)\\
 0\;(x≤0)
 \end{cases}
 $$
+
 따라서 $x$에 대한 $y$의 미분은 다음과 같음
+
 $$
 \frac{dy}{dx} = \begin{cases}
 1\;(x>0)\\
 0\;(x≤0)
 \end{cases}
 $$
+
 ReLU 계층의 계산 그래프는 다음과 같이 그릴 수 있음
 ![](./img/chapter5/img5-18.jpeg)
 ReLU 계층은 스위치로 비유할 수 있음
 ### 5.5.2 sigmoid 계층
 시그모이드 함수는 다음과 같음
+
 $$
 y=\frac{1}{1+exp(-x)}
 $$
+
 위 식을 계산 그래프로 그리면 다음과 같음
 ![](./img/chapter5/img5-19.jpeg)
 $y=\frac{1}{X}$의 미분은
+
 $$
 \begin{aligned}
 dy&=-\,\frac{1}{x^2}\\
 &=-\;y^2
 \end{aligned}
 $$
+
 이며, $y=exp(x)$의 미분은
+
 $$
 dy=exp(x)
 $$
+
 이므로 sigmoid의 역전파를 계산 그래프로 그려보면
 ![](./img/chapter5/img5-20.jpeg)
 그런데 $\frac{dL}{dy}y^2exp(-x)$는 다음과 같이 정리된다.
+
 $$
 \begin{aligned}
 \frac{dL}{dy}y^2exp(-x) &= \frac{dL}{dy}\frac{1}{(1+exp(-x))^2}exp(-x)\\
@@ -105,6 +116,7 @@ $$
 &=\frac{dL}{dy}y(1-y)\\
 \end{aligned}
 $$
+
 따라서 sigmoid 계층의 역전파는 순전파의 출력만으로 계산이 가능 함
 ![](./img/chapter5/img5-22.jpeg)
 
@@ -121,12 +133,14 @@ Affine 계층의 계산 그래프는 변수의 형상을 변수명 위에 표기
 $\frac{dL}{dX}$와 $X$의 형상이 같아야 하므로\
 $\frac{dL}{dX}(2,)$는 $\frac{dL}{dY}(3,)$에 $W^T(3,2)$를 곱해준 값과 같다. \
 따라서 형상을 같게 해주기 위해 역전파는 다음과 같다.
+
 $$
 \begin{aligned}
 \frac{dL}{dX}&=\frac{dL}{dY}W^T\\
 \frac{dL}{dW}&=X^T\frac{dL}{dY}\\
 \end{aligned}
 $$
+
 ![](./img/chapter5/img5-25.jpeg)
 ### 5.6.3 Softmax-with-Loss 계층
 소프트맥스 함수는 출력층에서 입력값을 정규화하여 출력함
