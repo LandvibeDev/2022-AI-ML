@@ -46,13 +46,13 @@ AI/ML 기본기를 익히고, 실전연습을 하기 위한 스터디입니다.
 
 | 주차 | 날짜 | 내용 | 담당 |
 |:-:|:-:|:-|:-:|
-| OT    | 7/13 (수) | [자기소개, 커리큘럼 소개](https://github.com/LandvibeDev/2022-AI-ML/issues/1)       | 배수민 |
+| OT    | 07/13 (수) | [자기소개, 커리큘럼 소개](https://github.com/LandvibeDev/2022-AI-ML/issues/1)       | 배수민 |
 |-|-| **이론** |-|
-| 1주차 | 7/20 (수) | [Chapter2. 퍼셉트론](https://github.com/LandvibeDev/2022-AI-ML/issues/2)           |  김건희 |
+| 1주차 | 07/20 (수) | [Chapter2. 퍼셉트론](https://github.com/LandvibeDev/2022-AI-ML/issues/2)           |  김건희 |
 |       |           | Chapter3. 신경망            |  김지범 |
 |       |           | [Chapter4. 신경망 학습](https://github.com/LandvibeDev/2022-AI-ML/issues/7)       |  박재형 |
-| 2주차 | 7/27 (수) | [Chapter5. 오차역전파법](https://github.com/LandvibeDev/2022-AI-ML/issues/5)       |  남윤호 |
+| 2주차 | 07/27 (수) | [Chapter5. 오차역전파법](https://github.com/LandvibeDev/2022-AI-ML/issues/5)       |  남윤호 |
 |       |           | Chapter6. 학습 관련 기술들   |  이재원 |
-|       |           | Chapter7. 합성곱 신경망(CNN) |  김건희 |
+| 3주차 | 08/03 (수) | Chapter7. 합성곱 신경망(CNN) |  김건희 |
 
 
